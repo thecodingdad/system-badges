@@ -5,6 +5,10 @@ Six specialized badge types for Home Assistant system status: Updates, Repairs, 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://github.com/hacs/integration)
 [![GitHub Release](https://img.shields.io/github/v/release/thecodingdad/system-badges)](https://github.com/thecodingdad/system-badges/releases)
 
+## Screenshot
+
+![System Badges](screenshots/screenshot.png)
+
 ## Badge Types
 
 | Badge Type | Description |
@@ -18,7 +22,7 @@ Six specialized badge types for Home Assistant system status: Updates, Repairs, 
 
 ## Prerequisites
 
-- Home Assistant 2024.1.0 or newer
+- Home Assistant 2026.3.0 or newer
 - HACS (recommended for installation)
 
 ## Installation
