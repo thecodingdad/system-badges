@@ -13,12 +13,12 @@ Six specialized badge types for Home Assistant system status: Updates, Repairs, 
 
 | Badge Type | Description |
 |------------|-------------|
-| `custom:system-updates-badge` | Shows count of available updates |
-| `custom:system-repairs-badge` | Shows count of active repairs |
-| `custom:system-notifications-badge` | Shows count of persistent notifications |
-| `custom:system-combined-badge` | Shows combined count of updates + repairs + notifications |
-| `custom:system-search-badge` | Opens the Quick Bar search |
-| `custom:system-restart-badge` | Opens restart menu (Reload, Restart, Reboot, Shutdown, Safe Mode) |
+| `custom:system-updates-badge` | Shows count of available updates (tap opens update pages) |
+| `custom:system-repairs-badge` | Shows count of active repairs (tap opens repairs page) |
+| `custom:system-notifications-badge` | Shows count of persistent notifications (taps open notifications sidebar) |
+| `custom:system-combined-badge` | Shows combined count of updates + repairs + notifications (tap opens settings) |
+| `custom:system-search-badge` | Tap opens the Quick Bar search |
+| `custom:system-restart-badge` | Tap opens restart menu (Reload, Restart, Reboot, Shutdown, Safe Mode) |
 
 ## Prerequisites
 
