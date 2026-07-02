@@ -1,7 +1,7 @@
 /**
  * System Badges for Home Assistant
  * =================================
- * v2.0.0
+ * v1.0.1
  *
  * Five custom badges:
  *   - custom:system-updates-badge       (available updates count)
@@ -21,7 +21,7 @@
  *   double_tap_action:                  # action on double tap
  */
 
-const SYSTEM_BADGES_VERSION = '1.0.0';
+const SYSTEM_BADGES_VERSION = '1.0.1';
 
 const { t } = await import(`./i18n/index.js?v=${SYSTEM_BADGES_VERSION}`);
 
@@ -92,7 +92,12 @@ function _handleAction(element, hass, actionConfig) {
       break;
 
     case 'quick-bar':
-      document.dispatchEvent(new KeyboardEvent('keydown', {
+      // HA's quick-bar shortcut handler validates the event's composedPath
+      // (canOverrideAlphanumericInput). Dispatching on `document` yields a
+      // composedPath of [document] and gets rejected since HA 2026.7 — the
+      // event must originate from an element in the body. Dispatch on
+      // document.body so the path passes the check.
+      document.body.dispatchEvent(new KeyboardEvent('keydown', {
         key: 'e', code: 'KeyE', bubbles: true, composed: true,
       }));
       break;
